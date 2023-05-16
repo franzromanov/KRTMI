@@ -16,11 +16,11 @@ void setup(){
   
 claw.attach(10);
 gripf.attach(9);
-hand.attach(8);
+hand.attach(7);
 
 claw.write(50);
 gripf.write(15);
-hand.write(0);
+hand.write(20);
  
 }
 void loop() {
