@@ -17,6 +17,10 @@ void setup(){
 claw.attach(10);
 gripf.attach(9);
 hand.attach(8);
+
+claw.write(50);
+gripf.write(15);
+hand.write(0);
  
 }
 void loop() {
@@ -26,10 +30,10 @@ void loop() {
     Stop();
 
     switch(command){
-    case 'F':  
+    case 'B':  
       forward();
       break;
-    case 'B':  
+    case 'F':  
        back();
       break;
     case 'L':  
@@ -106,26 +110,26 @@ void back()
  
 void left()
 {
-  motor1.setSpeed(1000); 
+  motor1.setSpeed(100); 
   motor1.run(BACKWARD); 
   motor2.setSpeed(1000); 
   motor2.run(FORWARD); 
-  motor3.setSpeed(1000);
-  motor3.run(FORWARD);  
+  motor3.setSpeed(100);
+  motor3.run(BACKWARD);  
   motor4.setSpeed(1000); 
-  motor4.run(BACKWARD); 
+  motor4.run(FORWARD); 
 }
  
 void right()
 {
   motor1.setSpeed(1000); 
   motor1.run(FORWARD); 
-  motor2.setSpeed(1000); 
+  motor2.setSpeed(100); 
   motor2.run(BACKWARD); 
   motor3.setSpeed(1000); 
-  motor3.run(BACKWARD); 
-  motor4.setSpeed(1000); 
-  motor4.run(FORWARD); 
+  motor3.run(FORWARD); 
+  motor4.setSpeed(100); 
+  motor4.run(BACKWARD); 
 } 
 
 void forward_leftturn()
